@@ -1,0 +1,267 @@
+body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'Ubuntu';
+}
+h1{
+    margin: 0;
+}
+
+#intro{
+    padding: 20px;
+    text-align: center;
+    border-bottom: solid 2px rgb(242, 242, 242);
+    background-color: #FAF7F7;
+
+    position: relative;
+}
+
+#intro > h1{
+    font-size: 8vh;
+    word-wrap: break-word;
+}
+
+#intro > h3{
+    word-wrap: break-word;
+    margin: 0;
+    margin-top: 20px;
+    color: rgb(50, 50, 50);
+    font-weight: 400;
+}
+
+#flex{
+    display: flex;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: calc(100% - 40px);
+    padding: 20px;
+}
+
+.block{
+    width: calc(33% - 40px);
+    height: 400px;
+    overflow: hidden;
+    min-width: 240px;
+    /* padding: 2px; */
+    margin-left: 10px;
+    padding: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #ECF0F1;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.block > div{
+    width: 90%;
+    height: 90%;
+}
+
+.block > div > h6{
+    text-align: center;
+    margin: 0;
+    font-size: 6vh;
+    margin-bottom: 20px;
+    color: rgb(58, 58, 58);
+    word-wrap: break-word;
+}
+
+.block > div > img{
+    max-height: calc(100% - 220px);
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-radius: 5px;
+    max-width: 100% !important;
+}
+
+.block > div > button{
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Ubuntu';
+    background-color: #1ABC9C;
+    box-shadow: none;
+    text-decoration: none;
+    border: none;
+    color: white;
+    font-weight: 400;
+    font-style: bold;
+    font-weight: bold;
+    width: 150px;
+    height: 40px;
+    font-size: 17px;
+    border-radius: 20px;
+    border: solid 2px #16A085;
+}
+
+.block > div > h5{
+    text-align: center;
+    font-size: 21px;
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+
+.block > div > button > i{
+    margin-right: 5px;
+}
+
+*{
+    outline: none !important;
+}
+
+#overlay{
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wave {
+  position: relative;
+  margin: 10% auto;
+  top: auto;
+  width: 100px;
+  height: 100px;
+}
+.wave span {
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  width: 20px;
+  height: 40px;
+  background: #ff9900;
+}
+/** jumping Wave (current item gets jumped) **/
+.wave_jump span {
+
+  -webkit-animation: wave_jump 1.5s infinite ease-in-out;
+          animation: wave_jump 1.5s infinite ease-in-out;
+}
+.wave_jump span:nth-child(1) {
+  left: 0px;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.wave_jump span:nth-child(2) {
+  left: 30px;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.wave_jump span:nth-child(3) {
+  left: 60px;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+.wave_jump span:nth-child(4) {
+  left: 90px;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.wave_jump span:nth-child(5) {
+  left: 120px;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+@-webkit-keyframes wave_jump {
+  0% {
+    height: 40px;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    background: #ff9900;
+  }
+  25% {
+    height: 60px;
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+    background: #DA781F;
+  }
+  50% {
+    height: 40px;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    background: #ff9900;
+  }
+  100% {
+    height: 40px;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    background: #ff9900;
+  }
+}
+@keyframes wave_jump {
+  0% {
+    height: 40px;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    background: #ff9900;
+  }
+  25% {
+    height: 60px;
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+    background: #DA781F;
+  }
+  50% {
+    height: 40px;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    background: #ff9900;
+  }
+  100% {
+    height: 40px;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    background: #ff9900;
+  }
+}
+
+.real-link{
+  text-decoration: none;
+  color: #3498DB !important;
+  font-weight: bold;
+}
+
+.real-link:hover{
+  color: #2980B9 !important;
+}
+
+#search{
+  display: flex;
+
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 300px;
+  padding: 15px;
+  border-radius: 27px;
+  border: solid 3px #F2F2F2;
+}
+#search > input{
+  flex: 1;
+  font-size: 19px;
+  border: none;
+  background-color: transparent;
+}
+#search > span{
+  margin-right: 5px;
+  font-size: 19px;
+  color: gray;
+}
